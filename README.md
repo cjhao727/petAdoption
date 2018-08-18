@@ -56,3 +56,12 @@ Now I am ready to code.
 4. Start building search service.
 5. By following the TDD, PetSearchServiceTest has been created.
 6. Due to the time, I am not going to commit step by step.
+
+Finished the basic tasks with unit tests.
+
+For integration test, trying to add controller tests if I get time.
+
+Setup swagger to test the application.
+It could be considered as integration test.
+For automated integration test, I would like to use POSTMan script to do the test.
+
