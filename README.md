@@ -100,6 +100,7 @@ Starting thinking about how to do the adoption.
         adoptionRecord;
     }
     ```
+ Once I have the adoptionRequest, I think I am about to move forward.
  Due to the time, I will stop here.
  Already have idea about how to do adoption.
  
@@ -118,3 +119,31 @@ Starting thinking about how to do the adoption.
  After the application started,
  please enter the url as below.
  http://localhost:8080/swagger-ui.html#/pet-controller
+ 
+ ###Follow up questions.
+ 
+ #### Testing Methodology
+ Share your thoughts on testing (unit & integration) the application you just built.
+ 
+ Finished the basic tasks with unit tests.
+ 
+ For integration test, trying to add controller tests if I get time.
+ 
+ Setup swagger to test the application.
+ It could be considered as integration test.
+ For automated integration test, I would like to use POSTMan script to do the test.
+
+ 
+ #### Tools
+ In your opinion, what’s helpful about version control systems? What’s annoying about them?
+ 
+ Pros:
+ - save you work. 
+ - provide a way to view the development history.
+ - provide an asynchronous way to work with multiple people.
+ 
+ Cons:
+ - When I need to handle merge conflicts.
+ - When there are too many branches in the repository.
+ - When I have bad commits.
+ - Sometimes it is hard to keep consistent when you work with lots of people.
