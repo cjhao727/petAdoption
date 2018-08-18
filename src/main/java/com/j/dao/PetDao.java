@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Repository
-public class petDao {
+public class PetDao {
     private static List<Pet> petList;
     
     static {
