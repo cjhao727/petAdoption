@@ -107,3 +107,14 @@ Starting thinking about how to do the adoption.
  
  Having some trouble with java 9 and maven compiler.
  Will submit the jar file as soon as I fix it.
+ 
+ 
+ Jar file has been uploaded.
+ 
+ To run this app,
+ ```
+ java -jar petAdoption-1.0-SNAPSHOT.jar
+ ```
+ After the application started,
+ please enter the url as below.
+ http://localhost:8080/swagger-ui.html#/pet-controller
