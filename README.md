@@ -73,3 +73,34 @@ For automated integration test, I would like to use POSTMan script to do the tes
 - To me, basic it is a CRUD issue. Need to manipulate the DAO object.
 
 Due to the time, I am not going to do TDD for petAdoptService.
+
+Starting thinking about how to do the adoption.
+
+1. need a post request to send the payload which will contain the information to generate the adoption recorder.
+2. define the payload.
+    ```
+    {
+        petid: id,
+        adoptionRecord: {
+            fee,
+            date,
+            adopter: {
+                name,
+                age,
+                address,
+                contact
+            }
+        }  
+    }
+    ```
+    Base on it, I will need to add one more domain.
+    ```
+    AdoptRequest {
+        petid;
+        adoptionRecord;
+    }
+    ```
+ Due to the time, I will stop here.
+ Already have idea about how to do adoption.
+ 
+ Going to wrap up and build the runnable jar file.

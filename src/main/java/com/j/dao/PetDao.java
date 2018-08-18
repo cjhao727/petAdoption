@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Repository
 public class PetDao {
@@ -27,4 +29,9 @@ public class PetDao {
     }
 
     public List<Pet> getAllPets() {return petList;}
+
+    // Thinking about Optional<Pet> here.
+    public Pet findPetById(int id) {
+        return petList.stream().filter(pet -> pet.getId() == id).collect(Collectors.toList()).get(0);
+    }
 }
