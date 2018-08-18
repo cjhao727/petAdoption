@@ -104,3 +104,6 @@ Starting thinking about how to do the adoption.
  Already have idea about how to do adoption.
  
  Going to wrap up and build the runnable jar file.
+ 
+ Having some trouble with java 9 and maven compiler.
+ Will submit the jar file as soon as I fix it.
