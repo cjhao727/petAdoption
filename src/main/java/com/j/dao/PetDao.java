@@ -26,5 +26,5 @@ public class PetDao {
         };
     }
 
-    public Collection<Pet> getAllPets() {return petList;}
+    public List<Pet> getAllPets() {return petList;}
 }
