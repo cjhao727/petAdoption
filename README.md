@@ -48,3 +48,6 @@ In order to do that, I'd like to add two more domains and update the pet obj.
     ```
 
 Now I am ready to code.
+
+- I have created a maven project. Now I am going to start building my spring boot application.
+- setup the project.
