@@ -46,8 +46,7 @@ In order to do that, I'd like to add two more domains and update the pet obj.
     }
     
     ```
-
-Now I am ready to code.
+### Now I am ready to code.
 
 - I have created a maven project. Now I am going to start building my spring boot application.
 1. setup the project.
@@ -57,6 +56,8 @@ Now I am ready to code.
 5. By following the TDD, PetSearchServiceTest has been created.
 6. Due to the time, I am not going to commit step by step.
 
+
+### Testing Methodology
 Finished the basic tasks with unit tests.
 
 For integration test, trying to add controller tests if I get time.
@@ -65,3 +66,10 @@ Setup swagger to test the application.
 It could be considered as integration test.
 For automated integration test, I would like to use POSTMan script to do the test.
 
+
+### Start working on the advanced adoption feature.
+
+- like the original analysis, I'd like to have adopter and adoptionRecord to assist.
+- To me, basic it is a CRUD issue. Need to manipulate the DAO object.
+
+Due to the time, I am not going to do TDD for petAdoptService.
