@@ -55,5 +55,4 @@ Now I am ready to code.
 3. create DAO layer. Since I do not need to incorporate a database, I am going to intake the fake data.
 4. Start building search service.
 5. By following the TDD, PetSearchServiceTest has been created.
-
-
+6. Due to the time, I am not going to commit step by step.

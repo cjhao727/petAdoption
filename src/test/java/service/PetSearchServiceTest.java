@@ -3,15 +3,18 @@ package service;
 import com.j.dao.PetDao;
 import com.j.domain.Pet;
 import com.j.service.PetSearchService;
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.doReturn;
 
 public class PetSearchServiceTest {
     @Mock
@@ -19,6 +22,11 @@ public class PetSearchServiceTest {
 
     @InjectMocks
     private PetSearchService petSearchService;
+
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+    }
 
     @Test
     public void testPetSearchService() {
@@ -34,18 +42,23 @@ public class PetSearchServiceTest {
         };
 
         List<Pet> mockResponse = Arrays.asList(mockData);
+        doReturn(mockResponse).when(petDao).getAllPets();
 
-        //get all pets
-        when(petDao.getAllPets()).thenReturn(mockResponse);
-        List<Pet> testResponse = petSearchService.getAllPets();
-        assertEquals(mockResponse, testResponse);
+        List<Pet> testGetAllPets = petSearchService.getAllPets();
+        assertEquals(mockResponse, testGetAllPets);
 
-        //get pets by location
+        List<Pet> findPetsByLocation = petSearchService.findPetByLocation("97205");
+        assertEquals(mockResponse.stream().filter(m -> m.getZipCode().equals("97205")).collect(Collectors.toList()),
+                findPetsByLocation);
 
-        //get pets by gender
+        List<Pet> findPetByType = petSearchService.findPetByType("dog");
+        assertEquals(mockResponse.stream().filter(m -> m.getType().equals("dog")).collect(Collectors.toList()),
+                findPetByType);
 
-        //get pets by type
+        List<Pet> findPetByGender = petSearchService.findPetByGender("male");
+        assertEquals(mockResponse.stream().filter(m -> m.getGender().equals("male")).collect(Collectors.toList()),
+                findPetByGender);
 
-        //get pets by compound conditions
+        //due to the time limitation, I am not going to test compound conditions
     }
 }
